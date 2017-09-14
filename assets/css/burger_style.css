@@ -66,3 +66,9 @@ body {
 h1 {
   color: #f30;
 }
+
+.burger-pic {
+  margin-top: 20px;
+  height: 200px;
+  width: 200px;
+}
