@@ -2,27 +2,27 @@
 
 var connection = require("./connection.js");
 
-function QuestionMarks(num) {
-	var arr = [];
+// function QuestionMarks(num) {
+// 	var arr = [];
 
-	for (var i = 0; i < num; i++) {
-		arr.push("?");
-	}
-	return arr.toString();
-}
+// 	for (var i = 0; i < num; i++) {
+// 		arr.push("?");
+// 	}
+// 	return arr.toString();
+// }
 
-function objToSql(ob) {
-	var arr = [];
+// function objToSql(ob) {
+// 	var arr = [];
 
-	for (var key in ob) {
-		arr.push(key + "=" + ob[key]);
-	}
+// 	for (var key in ob) {
+// 		arr.push(key + "=" + ob[key]);
+// 	}
 
-	return arr.toString();
-}
+// 	return arr.toString();
+// }
 
 var orm = {
-	all: function(tableInput, cb) {
+	selectAll: function(tableInput, cb) {
 		var queryString = "SELECT * FROM " + tableInput + ";";
 		connection.query(queryString, function (err, result) {
 			if (err) {
